@@ -21,21 +21,25 @@ By the end of this lab, you should be able to:
 An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. It is used to specify a behavior that classes must implement. Interfaces cannot have method implementations (except for default and static methods) and are typically used to achieve abstraction and multiple inheritance in Java.
 
 ### Example: Creating and Using an Interface
-Let’s create a simple interface called `MathOperation` with a single method `operate`:
+In the `src` folder, create a package called `ie.atu.lambda`. Inside this package, create a simple interface called `MathOperation` with a single method `operate`:
 
 ```java
 // Define the interface
 interface MathOperation {
     int operate(int a, int b); // Single abstract method
 }
-
+```
+Next Create a class called `Addition`.
+```java
 // Implement the interface using a class
 class Addition implements MathOperation {
     public int operate(int a, int b) {
         return a + b;
     }
 }
-
+```
+Finally, create a class called `Main`. Add the `main` method. Create an instance of the MathOperation interface using the Addition class. Finally we call the `operate` method of the `addition` object and print the result.
+```java
 public class Main {
     public static void main(String[] args) {
         MathOperation addition = new Addition();
