@@ -169,7 +169,8 @@ Let's create our own functional interface and use lambda expressions with it.
 interface Calculator {
     int calculate(int x);
 }
-
+```
+```java
 public class Main {
     public static void main(String[] args) {
         Calculator square = (int x) -> x * x;
@@ -182,7 +183,7 @@ public class Main {
 
 ## Part 4: Putting It All Together
 
-Let’s build a final example that combines multiple lambda expressions.
+Let’s build a final example that combines multiple lambda expressions. Here we will use a Java inbuilt functional interface called `Function`. It can take one argument and produces a result.
 
 ### Example: Combining Operations
 
@@ -191,7 +192,7 @@ import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-        // Define a lambda to reverse a string
+        // Define a lambda to reverse a string. Function<String, String> defines a function that takes a String as input and returns a String as output
         Function<String, String> reverse = s -> new StringBuilder(s).reverse().toString();
 
         // Define a lambda to convert a string to uppercase
