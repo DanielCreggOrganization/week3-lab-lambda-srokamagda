@@ -8,7 +8,7 @@
         "**/.github": true,
     },
     "java.server.launchMode": "Standard",
-    "java.dependency.packagePresentation": "hierarchical",
+    "java.dependency.packagePresentation": "flat",
     "redhat.telemetry.enabled": false,
     "git.autofetch": true,
     "workbench.tree.indent": 30,
@@ -17,4 +17,8 @@
         "tree.indentGuidesStroke": "#05ef3c"
     },
     "workbench.colorTheme": "Default Dark Modern",
+    // add src as java source
+    "java.project.sourcePaths": [
+        "src"
+    ],
 }
